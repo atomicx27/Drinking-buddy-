@@ -45,6 +45,14 @@ model User {
   userName     String?
 }
 
+model TestSync {
+  createdAt  DateTime @default(now())
+  id         String   @id @default(cuid())
+  testField1 String?
+  testField2 Int?
+  updatedAt  DateTime @updatedAt
+}
+
 enum EnumSurveyDrinkerType {
   Option1
 }
